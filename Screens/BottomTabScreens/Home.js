@@ -1,11 +1,10 @@
-import { StyleSheet, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Platform, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import Header from '../../components/Header';
 import TopTabNavigator from '../../Navigation/TopTabNavigator';
 
 export default function Home({navigation}) {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container,{paddingTop:Platform.OS==='android'?StatusBar.currentHeight:0 }]}>
         <Header navigation={navigation} />
         <View style={styles.main}>
            <TopTabNavigator/>
@@ -22,6 +21,5 @@ const styles = StyleSheet.create({
     main:{
       flex:1,
       padding:10,
-      
     }
 })

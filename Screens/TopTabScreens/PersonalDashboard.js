@@ -10,7 +10,7 @@ import Icons from '../../constants/Icons'
 
 const PersonalDashboard = () => {
   return (
-    <ScrollView showsVerticalScrollIndicator={false} >
+    <ScrollView showsVerticalScrollIndicator={false}  >
       <Calender/>
       <HealthFact/>
       <View style={styles.container}>
@@ -39,32 +39,33 @@ export default PersonalDashboard
 
 const styles = StyleSheet.create({
     quickAction:{
-        marginTop:10,
-        flexDirection:'row',
-        justifyContent:'space-between'
+      marginTop:10,
+      flexDirection:'row',
+      justifyContent:'space-between'
     },
     actionHeading:{
-        fontFamily:'Poppins_700Bold',
-        fontSize:20
+      fontFamily:'Poppins_700Bold',
+      fontSize:20
     },
-    txt:{color:"white",fontSize:10},
+    txt:{
+      color:"white",
+      fontSize:10
+    },
     addAction:{
-        backgroundColor:Colors.statusBar1,
-        flexDirection:'row',
-        alignItems:'center',
-        borderRadius:16,
-        paddingLeft:4,
-        paddingRight:4
+      backgroundColor:Colors.statusBar1,
+      flexDirection:'row',
+      alignItems:'center',
+      borderRadius:16,
+      paddingLeft:4,
+      paddingRight:4
     },
-     container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-  },
-  containerView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginVertical: 20
-  }
+    container: {
+      justifyContent: 'center',
+      backgroundColor: '#ecf0f1',
+    },
+    containerView: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginVertical: 20
+    }
 })

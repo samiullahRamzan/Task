@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
+import Colors from '../constants/Colors';
 
 export default function CaleriesStatusBox() {
   return (
@@ -23,39 +24,42 @@ export default function CaleriesStatusBox() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    backgroundColor: Colors.statusBar1,
     color: 'white',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 40,
     paddingHorizontal: 20,
-    borderRadius: 10
+    borderRadius: 10,
+    marginTop:10
   },
   countText: {
     color: 'white',
-    fontSize: 30,
-    fontWeight: 600
+    fontSize: 20,
+    fontFamily:'Poppins_700Bold'
   },
   countTitle: {
     color: 'white',
-    fontSize: 17
+    fontSize: 15,
+    fontFamily:'Poppins_400Regular'
   },
   innerContainer: {
     alignItems: 'center'
   },
-    semiCircle: {
-    width: 150,
-    height: 75,
+  semiCircle: {
+    width: 140,
+    height: 70,
     backgroundColor: 'transparent',
-    borderTopLeftRadius: 100,
-    borderTopRightRadius: 100,
+    borderTopLeftRadius: 70,
+    borderTopRightRadius: 70,
     borderWidth: 6,
     borderLeftColor: 'yellow',
     borderTopColor: 'white',
     borderRightColor: 'white',
     borderBottomWidth: 0,
     position: 'absolute',
-    bottom: 0,
+    bottom: 10,
+    // transform: [{ rotate: '-30deg' }],
   },
 });
