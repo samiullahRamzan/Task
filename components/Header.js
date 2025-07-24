@@ -1,10 +1,11 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import Colors from '../constants/Colors';
 import Icons from '../constants/Icons';
 
 const Header = ({navigation}) => {
   return (
-    <View style={styles.container}>
+    <LinearGradient style={styles.container} colors={[Colors.grad1,Colors.grad2]}  start={{ x: 0, y: 0 }} end={{ x: 1, y: 1}}>
 
       <Pressable onPress={()=> navigation.openDrawer()}>
         {Icons.Menu({ size: 30, color: 'white' })}
@@ -19,7 +20,7 @@ const Header = ({navigation}) => {
          {Icons.Bell({ size: 22, color: 'white' })}
          {Icons.Profile({ size: 22, color: 'white' })}
       </View>
-    </View>
+    </LinearGradient>
   )
 }
 

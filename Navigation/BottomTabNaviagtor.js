@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View } from 'react-native';
 import Colors from '../constants/Colors';
 import Icons from '../constants/Icons';
 import Chat from '../Screens/BottomTabScreens/Chat';
@@ -9,16 +10,17 @@ import Statistics from '../Screens/BottomTabScreens/Statistics';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => (
-  <Tab.Navigator screenOptions={{
-    headerShown: false,
-    tabBarActiveTintColor:'#68B9CB',   // Active icon/text color
-    tabBarInactiveTintColor: '#717170',    // Inactive icon/text color
-    tabBarStyle: {
-      backgroundColor: Colors.tabbgColor,
-      paddingTop: 5,
-      height: 120,
-    },
-  }}>
+  <View style={{flex:1}}>
+    <Tab.Navigator screenOptions={{
+      headerShown: false,
+      tabBarActiveTintColor:'#68B9CB',   // Active icon/text color
+      tabBarInactiveTintColor: '#717170',    // Inactive icon/text color
+      tabBarStyle: {
+        backgroundColor: Colors.tabbgColor,
+        paddingTop: 5,
+        height: 120,
+      },
+    }}>
     <Tab.Screen name="Home" component={Home}
       options={{
         tabBarLabel: 'Dashboard',
@@ -60,6 +62,7 @@ const TabNavigator = () => (
       }}  
     />
   </Tab.Navigator>
+  </View>
 );
 
 export default TabNavigator;
