@@ -1,5 +1,4 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { StyleSheet } from 'react-native';
 import PersonalDashboard from '../Screens/TopTabScreens/PersonalDashboard';
 import ProgressDashboard from '../Screens/TopTabScreens/ProgressDashboard';
 import Colors from '../constants/Colors';
@@ -40,5 +39,3 @@ const TopTabNavigator = () => {
 }
 
 export default TopTabNavigator
-
-const styles = StyleSheet.create({})
