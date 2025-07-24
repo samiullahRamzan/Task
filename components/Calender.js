@@ -1,11 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRef, useState } from 'react';
 import {
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 import Colors from '../constants/Colors';
 
@@ -26,7 +26,7 @@ const data = [
   { id: '14', day: 'Sun', date: '5' },
 ];
 
-const ITEM_WIDTH = 80; // card width + margin
+const ITEM_WIDTH = 70; // card width + margin
 
 const Calender = () => {
   const scrollRef = useRef(null);
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     padding: 5,
     marginRight: 10,
     alignItems: 'center',
-    width: '10%',
+    width: 60,
   },
   day: {
     fontSize: 14,

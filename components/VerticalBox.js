@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
+import Colors from '../constants/Colors';
 
 export default function VerticalBox({title, icon, circleStyle, circleCount, circleTitle, position,customicon}) {
   return (
@@ -35,11 +36,11 @@ export default function VerticalBox({title, icon, circleStyle, circleCount, circ
 const styles = StyleSheet.create({
   container: {
     flex: 0.49,
-    backgroundColor: 'red',
+    backgroundColor: Colors.statusBar1,
     alignItems: 'center',
-    gap: 20,
+    gap: 10,
     paddingVertical: 20,
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
   },
   boxTitle: {
     color: 'white',
@@ -47,20 +48,20 @@ const styles = StyleSheet.create({
     fontWeight: 600
   },
   circle1Main: {
-    width: 180,
-    height: 180,
+    width: 160,
+    height: 160,
     borderRadius: "100%",
     backgroundColor: 'pink',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 10,
     borderBottomColor: 'yellow',
-     transform: [{ rotate: '45deg' }],
+    transform: [{ rotate: '45deg' }],
     
   },
   circle1Main2: {
-    width: 180,
-    height: 180,
+    width: 160,
+    height: 160,
     borderRadius: "100%",
     backgroundColor: 'pink',
     alignItems: 'center',
@@ -68,10 +69,10 @@ const styles = StyleSheet.create({
     borderWidth: 10,
     
   },
-    circleCountText: {
+  circleCountText: {
     color: 'white',
     fontSize: 30,
-    fontWeight: 600
+    fontWeight: 600,
   },
   circleCountTitle: {
     color: 'white',
